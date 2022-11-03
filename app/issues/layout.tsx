@@ -1,13 +1,13 @@
 import { PrismaClient } from '@prisma/client';
 import React from 'react';
 import IssuesList from './IssuesList';
+import { prisma } from '../../lib/db';
 
 interface Props {
   children: React.ReactNode;
 }
 
 export default async function IssuesLayout({ children }: Props) {
-  const prisma = new PrismaClient();
   const issues = await prisma.issue.findMany();
 
   return (

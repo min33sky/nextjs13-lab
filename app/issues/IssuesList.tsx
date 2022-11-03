@@ -13,11 +13,13 @@ export default function IssuesList({ issues }: Props) {
           <article className="flex flex-col space-y-3 bg-slate-600">
             <h2>{issue.title}</h2>
             <p>{issue.summary}</p>
-            <p className="bg-slate-400 py-4">
-              <Link className="block" href={`/issues/${issue.id}`}>
-                View Details
-              </Link>
-            </p>
+            <Link
+              prefetch={false}
+              className="block bg-blue-900"
+              href={`/issues/${issue.id}`}
+            >
+              View Details
+            </Link>
           </article>
         </li>
       ))}

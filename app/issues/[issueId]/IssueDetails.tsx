@@ -3,6 +3,8 @@ import { Issue } from '@prisma/client';
 interface Props extends Issue {}
 
 export default function IssueDetails({ title, summary, description }: Props) {
+  console.log('!@#: ', title, summary, description);
+
   return (
     <article className="p-12 ">
       <header>
