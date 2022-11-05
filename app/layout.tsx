@@ -1,5 +1,5 @@
-import MainNavigation from '../components/header/MainNavigation';
 import './globals.css';
+import Header from './Header';
 
 export default function RootLayout({
   children,
@@ -14,9 +14,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="bg-slate-800 text-slate-100 h-screen flex flex-col overflow-hidden">
-        <header>
-          <MainNavigation />
-        </header>
+        <Header />
         <main className="flex flex-col flex-1 bg-gray-700">{children}</main>
       </body>
     </html>
